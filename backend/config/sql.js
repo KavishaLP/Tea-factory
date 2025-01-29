@@ -10,7 +10,7 @@ const sql = mysql.createConnection({
     database: process.env.DB_NAME
 });
 
-sqldb.connect((err) => {
+sql.connect((err) => {
     if (err) throw err;
     console.log("Database connected!");
 });
