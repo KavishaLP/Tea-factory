@@ -4,7 +4,8 @@
   justify-content: space-around; /* Ensures equal spacing */
   align-items: center;
   margin: 4px;
-  width: 100%;
+  width: 100%; /* Ensures full width */
+  box-sizing: border-box; /* Ensures padding does not affect the container width */
 }
 
 .stats-card {
@@ -12,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 180px; /* Default width */
+  width: calc(33.33% - 20px); /* Three cards per row, with spacing between */
   height: 100px;
   padding: 15px;
   background-color: white;
@@ -21,6 +22,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin: 10px; /* Add space between cards */
+  box-sizing: border-box; /* Ensures padding and margin are included in width */
 }
 
 .stats-icon {
@@ -48,7 +50,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .stats-card {
-    width: 150px; /* Reduce width on smaller screens */
+    width: calc(50% - 20px); /* Two cards per row on medium screens */
     height: 90px;
     padding: 10px;
   }
@@ -68,7 +70,7 @@
   }
 
   .stats-card {
-    width: 120px; /* Further reduce width */
+    width: calc(100% - 16px); /* Single card per row on very small screens */
     height: 80px;
     padding: 8px;
   }

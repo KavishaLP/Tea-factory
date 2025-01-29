@@ -1,5 +1,5 @@
 .container {
-  background-color: rgb(248, 242, 242); /* Debugging */
+  background-color: rgb(244, 246, 245); /* Debugging */
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -7,32 +7,48 @@
 }
 
 .form-box {
-  background: white;
-  padding: 20px;
+  background: rgb(114, 234, 152);
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: 700px;
   text-align: center;
+  height: 850px;
 }
 
+/* Heading */
 h2 {
   margin-bottom: 20px;
+  color: #333;
 }
 
+/* Labels */
 label {
   display: block;
   font-weight: bold;
   margin-top: 10px;
+  text-align: left;
 }
 
+/* Input Fields */
 input {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 14px;
 }
 
+/* Error Message */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Submit Button */
 button {
   width: 100%;
   padding: 10px;
@@ -40,10 +56,18 @@ button {
   color: white;
   border: none;
   border-radius: 4px;
-  margin-top: 10px;
+  margin-top: 15px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
   background-color: darkgreen;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .form-box {
+    width: 90%;
+  }
 }
