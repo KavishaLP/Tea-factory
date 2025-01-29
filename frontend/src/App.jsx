@@ -13,6 +13,7 @@ import Sidebar2 from './Component/Sidebar/sidebar2'; // Admin sidebar
 import TeaSackUpdate from './Pages/teasackupdate/teasack';
 import Viewpayment from './Pages/viewPayments/viewpayment';
 import CreateFarmerAccount from './Pages/createFarmerAccounts/CFA';
+import Fertilizer from './Pages/fertilizer/fertilizer';
 
 function App() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function App() {
             <Route path="/admin-dashboard" element={<Sidebar2 />} />
             <Route path="/user-dashboard" element={<Sidebar />} />
             <Route path="/CreateFarmerAccount" element={<CreateFarmerAccount/>} />
+            <Route path="/fertilizer" element={<Fertilizer/>} />
           </Routes>
         </main>
       </div>

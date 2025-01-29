@@ -1,98 +1,132 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
+/* Container */
+.fertilizer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Left Column - Fertilizer Request Form */
+.column-left {
+  width: 40%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fertilizer-distribution h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.distribution-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.distribution-form input,
+.distribution-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: darkgreen;
+}
+
+/* Right Column - Requests Table */
+.column-right {
+  width: 55%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.requests-header h2 {
+  margin: 0;
+}
+
+.history-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.history-button:hover {
+  background-color: darkblue;
+}
+
+/* Requests Table */
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.requests-table th,
+.requests-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.requests-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.confirm-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: darkorange;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .fertilizer-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .column-left,
-  .column-right {
-    flex: 1;
-  }
-  
-  .fertilizer-distribution,
-  .requests-section {
-    background-color: #ccffcc;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .requests-header {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
-  
-  .history-button {
-    background-color: #006400;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
+
+  .column-left,
+  .column-right {
+    width: 90%;
+    margin-bottom: 20px;
   }
-  
-  .requests-table {
-    width: 100%;
-    margin-top: 10px;
-    border-collapse: collapse;
-  }
-  
-  .requests-table th,
-  .requests-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .confirm-button {
-    background-color: #006400;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .distribution-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-  }
-  
-  .distribution-form label {
-    font-weight: bold;
-  }
-  
-  .distribution-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-button {
-    background-color: #006400;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 25%;
-   
-  }
-  
-  .footer {
-    margin-top: 20px;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9em;
-  }
-  
+}
